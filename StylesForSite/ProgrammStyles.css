@@ -1,0 +1,145 @@
+/* Прописываю основные переменные */
+
+:root {
+  /* Прописываю основные цвета */
+
+  --bg_main_color: ##F5F5F5;
+  --first_color: #00ABE1;
+  --second_color: #161F6D;
+  --font_color: #333;
+
+  --helpfull_white: #fff;
+  --helpfull_black: #000;
+
+  /* Основные размеры шрифтов */
+
+  --min-font-weight: 400;
+  --sred-font-wight: 600;
+  --max-font-weight: 700;
+
+}
+
+/* Прописываю основные стили */
+
+body {
+  font-family: "Golos Text";
+  text-align: center;
+  padding: 20px;
+  background-color: var(--bg_main_color);
+}
+
+/* Прописываю стили заголовков */
+
+.title h1 {
+  font-style: var(--max-font-wight);
+  font-size: 50px;
+  display: inline-block;
+  transition: 0.6s;
+}
+
+.title .first-word {
+  color: var(--first_color);
+}
+
+.title .second-word {
+  color: var(--second_color);
+}
+
+.title:hover {
+  .first-word {
+    color: var(--second_color);
+  }
+
+  .second-word {
+    color: var(--first_color);
+  }
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+input {
+  border-color: #00ABE1;
+}
+
+input, button {
+  margin: 5px;
+  padding: 8px;
+  border-radius: 8px;
+}
+
+button {
+  background-color: var(--first_color);
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: 0.6s;
+}
+
+button:hover {
+  background-color: var(--second_color);
+}
+
+#output {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  width: 800px;
+  height: 300px;
+  margin-top: 20px;
+  font-weight: var(--min-font-wight);
+}
+
+/* Прописываю параметры адаптивного дизайна */
+
+/* Для устройств с шириной экрана до 600px */
+@media (max-width: 600px) {
+  .title h1 {
+    font-size: 30px; /* Уменьшаем размер шрифта для мобильных устройств */
+  }
+
+  #output {
+    width: 100%; /* Занимает всю ширину экрана */
+  }
+
+  .container {
+    max-width: calc(100% - 50px); /* Занимает всю ширину экрана, кроме отступов с боков */
+    margin: 0 auto; /* Располагается по центру */
+  }
+  
+  .container button {
+    display: block; /* Размещаются на одной строке */
+    width: calc(100% - 50px); /* Занимают всю ширину поля контейнера, кроме отступов с боков */
+  }
+
+  .container input {
+    display: block;
+    width: calc(100% - 70px);
+  }
+
+}
+
+/* Для устройств с шириной экрана от 601px до 1024px */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .title h1 {
+    font-size: 40px; /* Немного увеличиваем размер шрифта для планшетов */
+  }
+
+  #output {
+    width: 60%; /* Занимает 60% ширины экрана */
+  }
+}
+
+/* Для устройств с шириной экрана от 1025px и более */
+@media (min-width: 1025px) {
+  .title h1 {
+    font-size: 50px; /* Возвращаем обычный размер шрифта для больших экранов */
+  }
+
+  #output {
+    width: 800px; /* Возвращаем исходную ширину блока */
+  }
+}
