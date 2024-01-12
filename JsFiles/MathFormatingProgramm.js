@@ -8,10 +8,12 @@ function findCylinder() {
     const volume = Math.PI * (radius ** 2) * height;
     // const lateralSurfaceArea = 2 * Math.PI * radius * (radius + height);
     // const totalSurfaceArea = lateralSurfaceArea + 2 * (Math.PI * (radius ** 2));
-    const lateralSurfaceArea = 2 * Math.PI * radius * height;
-    const groundsSurfaceArea = 2 * Math.PI * radius;
-    const totalSurfaceArea = lateralSurfaceArea + 2 * groundsSurfaceArea;
-    cylinders.push({ radius, height, volume, lateralSurfaceArea, groundsSurfaceArea, totalSurfaceArea });
+    // const lateralSurfaceArea = 2 * Math.PI * radius * height;
+    // const groundsSurfaceArea = 2 * Math.PI * radius;
+    // const totalSurfaceArea = lateralSurfaceArea + 2 * groundsSurfaceArea;
+    const totalSurfaceArea = 2 * Math.PI * (radius ** 2) + 2 * Math.PI * radius * height;
+    // cylinders.push({ radius, height, volume, lateralSurfaceArea, groundsSurfaceArea, totalSurfaceArea });
+    cylinders.push({ radius, height, volume, totalSurfaceArea });
   }
 
   const minSurfaceAreaCylinder = cylinders.reduce((min, cylinder) => cylinder.totalSurfaceArea < min.totalSurfaceArea ? cylinder : min, cylinders[0]);
@@ -19,7 +21,8 @@ function findCylinder() {
     Радиус: ${minSurfaceAreaCylinder.radius}, 
     Высота: ${minSurfaceAreaCylinder.height}, 
     Объём: ${minSurfaceAreaCylinder.volume},
-    Площадь боковой поверхности: ${minSurfaceAreaCylinder.lateralSurfaceArea},
-    Площадь поверхности основания: ${minSurfaceAreaCylinder.groundsSurfaceArea},
     Площадь полной поверхности цилиндра: ${minSurfaceAreaCylinder.totalSurfaceArea}`;
 }
+
+// Площадь боковой поверхности: ${minSurfaceAreaCylinder.lateralSurfaceArea},
+// Площадь поверхности основания: ${minSurfaceAreaCylinder.groundsSurfaceArea},
