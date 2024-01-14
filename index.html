@@ -9,18 +9,44 @@
     <!-- Подключение дополнительных файлов -->
     <link rel="stylesheet" href="StylesForSite/ProgrammStyles.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <script src="JsFiles/MathFormatingProgramm.js"></script>
+    <link rel="stylesheet" href="StylesForSite/CardStyles.css">
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
 </head>
 <body>
   <div class="title">
     <h1 class="first-word">Cylinder</h1>
     <h1 class="second-word">Converter</h1>
   </div>
-  <label for="numCylinders">Введите количество цилидров:</label>
-  <div class="container">
-    <input type="number" id="numCylinders">
-    <button onclick="findCylinder()">Решить</button>
+
+  <!-- Прописываю карточки для сайта -->
+  <div class="wrap">
+     <a href="Pages/top.html">
+      <div class="informBlock">
+        <i class='bx bx-cylinder'></i>
+        <h5 class="mainText">Объём</h5>
+        <div class="underlineBlock"></div>
+        <p class="secondText">Вычисления<br>производятся<br>через величину объёма цилиндра</p>
+      </div>
+     </a>
+
+     <a href="Pages/middle.html">
+      <div class="informBlock">
+        <i class='bx bxs-cylinder' ></i>
+        <h5 class="mainText">Несколько<br>объёмов</h5>
+        <div class="underlineBlock"></div>
+        <p class="secondText">Вычисления<br>производятся<br>для нескольких цилиндров</p>
+      </div>
+     </a>
+
+     <a href="Pages/last.html">
+      <div class="informBlock">
+        <i class='bx bx-math'></i>
+        <h5 class="mainText">R и H</h5>
+        <div class="underlineBlock"></div>
+        <p class="secondText">Вычисления<br>производятся<br>через радиус и высоту</p>
+      </div>
+     </a>
   </div>
-  <div id="output"></div>
+
 </body>
 </html>

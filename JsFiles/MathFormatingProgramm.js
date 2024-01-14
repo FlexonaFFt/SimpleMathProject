@@ -3,7 +3,7 @@ function findCylinder() {
   const cylinders = [];
 
   for (let i = 0; i < numCylinders; i++) {
-    const radius = prompt(`Введите радиус цилиндра ${i + 1}:`);
+    const radius = prompt(`Введите радиус основания цилиндра ${i + 1}:`);
     const height = prompt(`Введите высоту цилиндра ${i + 1}:`);
     const volume = Math.PI * (radius ** 2) * height;
     // const lateralSurfaceArea = 2 * Math.PI * radius * (radius + height);
@@ -17,7 +17,7 @@ function findCylinder() {
   }
 
   const minSurfaceAreaCylinder = cylinders.reduce((min, cylinder) => cylinder.totalSurfaceArea < min.totalSurfaceArea ? cylinder : min, cylinders[0]);
-  document.getElementById('output').innerText = `Цилиндр с минимальной площадью поверхности имеет: 
+  document.getElementById('output').innerText = `Цилиндр имеет: 
     Радиус: ${minSurfaceAreaCylinder.radius}, 
     Высота: ${minSurfaceAreaCylinder.height}, 
     Объём: ${minSurfaceAreaCylinder.volume},
