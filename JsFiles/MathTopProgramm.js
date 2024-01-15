@@ -16,5 +16,5 @@ class Cylinder {
     const r = Math.pow(V1, 1 / 3) / Math.pow(2 * Math.PI, 1 / 3);
     const h = V1 / (Math.PI * r ** 2);
     const s = 2 * Math.PI * r ** 2 + 2 * Math.PI * r * h;
-    document.getElementById("output").innerHTML = `Площадь поверхности цилиндра: ${s.toFixed(4)}`;
+    document.getElementById("output").innerHTML = `Площадь поверхности цилиндра: ${s.toFixed(4)}<br>Радиус основания: ${r.toFixed(4)}, Высота: ${h.toFixed(4)}`;
   }
